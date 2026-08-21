@@ -1,0 +1,276 @@
+# 手动定义应用（ccc-notes）自定义命令的权限。
+# Tauri v2 会把 src-tauri/permissions/ 下的权限文件命名空间化为
+# `<包名>:allow-<命令>`（此处即 ccc-notes:allow-<命令>），
+# 供 capabilities/default.json 引用。
+# 由于 tauri-build 未自动为这些命令生成权限，这里显式声明。
+
+[[permission]]
+identifier = "allow-list-nodes"
+description = "Enables the list_nodes command."
+commands.allow = ["list_nodes"]
+
+[[permission]]
+identifier = "allow-get-node"
+description = "Enables the get_node command."
+commands.allow = ["get_node"]
+
+[[permission]]
+identifier = "allow-save-node"
+description = "Enables the save_node command."
+commands.allow = ["save_node"]
+
+[[permission]]
+identifier = "allow-delete-node"
+description = "Enables the delete_node command."
+commands.allow = ["delete_node"]
+
+[[permission]]
+identifier = "allow-move-node"
+description = "Enables the move_node command."
+commands.allow = ["move_node"]
+
+[[permission]]
+identifier = "allow-clear-all"
+description = "Enables the clear_all command."
+commands.allow = ["clear_all"]
+
+[[permission]]
+identifier = "allow-put-many"
+description = "Enables the put_many command."
+commands.allow = ["put_many"]
+
+[[permission]]
+identifier = "allow-next-order"
+description = "Enables the next_order command."
+commands.allow = ["next_order"]
+
+[[permission]]
+identifier = "allow-search-nodes"
+description = "Enables the search_nodes command."
+commands.allow = ["search_nodes"]
+
+[[permission]]
+identifier = "allow-get-data-dir"
+description = "Enables the get_data_dir command."
+commands.allow = ["get_data_dir"]
+
+[[permission]]
+identifier = "allow-set-data-dir"
+description = "Enables the set_data_dir command."
+commands.allow = ["set_data_dir"]
+
+[[permission]]
+identifier = "allow-save-file"
+description = "Enables the save_file command (export material to a local path)."
+commands.allow = ["save_file"]
+
+# 退出行为（系统托盘）
+[[permission]]
+identifier = "allow-set-close-behavior"
+description = "Enables the set_close_behavior command."
+commands.allow = ["set_close_behavior"]
+
+# 伏笔（标注）
+[[permission]]
+identifier = "allow-list-foreshadowings"
+description = "Enables the list_foreshadowings command."
+commands.allow = ["list_foreshadowings"]
+
+[[permission]]
+identifier = "allow-add-foreshadow"
+description = "Enables the add_foreshadow command."
+commands.allow = ["add_foreshadow"]
+
+[[permission]]
+identifier = "allow-set-foreshadow-done"
+description = "Enables the set_foreshadow_done command."
+commands.allow = ["set_foreshadow_done"]
+
+[[permission]]
+identifier = "allow-delete-foreshadow"
+description = "Enables the delete_foreshadow command."
+commands.allow = ["delete_foreshadow"]
+
+# 素材库（SQLite）
+[[permission]]
+identifier = "allow-list-assets"
+description = "Enables the list_assets command."
+commands.allow = ["list_assets"]
+
+[[permission]]
+identifier = "allow-get-asset"
+description = "Enables the get_asset command."
+commands.allow = ["get_asset"]
+
+[[permission]]
+identifier = "allow-save-asset"
+description = "Enables the save_asset command."
+commands.allow = ["save_asset"]
+
+[[permission]]
+identifier = "allow-delete-asset"
+description = "Enables the delete_asset command."
+commands.allow = ["delete_asset"]
+
+[[permission]]
+identifier = "allow-list-asset-categories"
+description = "Enables the list_asset_categories command."
+commands.allow = ["list_asset_categories"]
+
+[[permission]]
+identifier = "allow-save-asset-category"
+description = "Enables the save_asset_category command."
+commands.allow = ["save_asset_category"]
+
+[[permission]]
+identifier = "allow-delete-asset-category"
+description = "Enables the delete_asset_category command."
+commands.allow = ["delete_asset_category"]
+
+[[permission]]
+identifier = "allow-put-many-assets"
+description = "Enables the put_many_assets command."
+commands.allow = ["put_many_assets"]
+
+[[permission]]
+identifier = "allow-put-many-asset-categories"
+description = "Enables the put_many_asset_categories command."
+commands.allow = ["put_many_asset_categories"]
+
+[[permission]]
+identifier = "allow-clear-all-assets"
+description = "Enables the clear_all_assets command."
+commands.allow = ["clear_all_assets"]
+
+# 快捷库（SQLite）
+[[permission]]
+identifier = "allow-list-shortcuts"
+description = "Enables the list_shortcuts command."
+commands.allow = ["list_shortcuts"]
+
+[[permission]]
+identifier = "allow-get-shortcut"
+description = "Enables the get_shortcut command."
+commands.allow = ["get_shortcut"]
+
+[[permission]]
+identifier = "allow-save-shortcut"
+description = "Enables the save_shortcut command."
+commands.allow = ["save_shortcut"]
+
+[[permission]]
+identifier = "allow-delete-shortcut"
+description = "Enables the delete_shortcut command."
+commands.allow = ["delete_shortcut"]
+
+[[permission]]
+identifier = "allow-list-shortcut-categories"
+description = "Enables the list_shortcut_categories command."
+commands.allow = ["list_shortcut_categories"]
+
+[[permission]]
+identifier = "allow-save-shortcut-category"
+description = "Enables the save_shortcut_category command."
+commands.allow = ["save_shortcut_category"]
+
+[[permission]]
+identifier = "allow-delete-shortcut-category"
+description = "Enables the delete_shortcut_category command."
+commands.allow = ["delete_shortcut_category"]
+
+[[permission]]
+identifier = "allow-put-many-shortcuts"
+description = "Enables the put_many_shortcuts command."
+commands.allow = ["put_many_shortcuts"]
+
+[[permission]]
+identifier = "allow-put-many-shortcut-categories"
+description = "Enables the put_many_shortcut_categories command."
+commands.allow = ["put_many_shortcut_categories"]
+
+[[permission]]
+identifier = "allow-clear-all-shortcuts"
+description = "Enables the clear_all_shortcuts command."
+commands.allow = ["clear_all_shortcuts"]
+
+# 通用 meta（迁移标记等）
+[[permission]]
+identifier = "allow-get-meta"
+description = "Enables the get_meta command."
+commands.allow = ["get_meta"]
+
+[[permission]]
+identifier = "allow-set-meta"
+description = "Enables the set_meta command."
+commands.allow = ["set_meta"]
+
+# v3 新库（阅读 / 音乐 / 视频）基础设施
+[[permission]]
+identifier = "allow-scan-folder"
+description = "Enables the scan_folder command."
+commands.allow = ["scan_folder"]
+
+[[permission]]
+identifier = "allow-read-file-bytes"
+description = "Enables the read_file_bytes command."
+commands.allow = ["read_file_bytes"]
+
+[[permission]]
+identifier = "allow-list-mounted-folders"
+description = "Enables the list_mounted_folders command."
+commands.allow = ["list_mounted_folders"]
+
+[[permission]]
+identifier = "allow-add-mounted-folder"
+description = "Enables the add_mounted_folder command."
+commands.allow = ["add_mounted_folder"]
+
+[[permission]]
+identifier = "allow-remove-mounted-folder"
+description = "Enables the remove_mounted_folder command."
+commands.allow = ["remove_mounted_folder"]
+
+[[permission]]
+identifier = "allow-reorder-mounted-folders"
+description = "Enables the reorder_mounted_folders command."
+commands.allow = ["reorder_mounted_folders"]
+
+[[permission]]
+identifier = "allow-get-book-progress"
+description = "Enables the get_book_progress command."
+commands.allow = ["get_book_progress"]
+
+[[permission]]
+identifier = "allow-set-book-progress"
+description = "Enables the set_book_progress command."
+commands.allow = ["set_book_progress"]
+
+[[permission]]
+identifier = "allow-list-book-notes"
+description = "Enables the list_book_notes command."
+commands.allow = ["list_book_notes"]
+
+[[permission]]
+identifier = "allow-add-book-note"
+description = "Enables the add_book_note command."
+commands.allow = ["add_book_note"]
+
+[[permission]]
+identifier = "allow-delete-book-note"
+description = "Enables the delete_book_note command."
+commands.allow = ["delete_book_note"]
+
+[[permission]]
+identifier = "allow-list-all-book-notes"
+description = "Enables the list_all_book_notes command."
+commands.allow = ["list_all_book_notes"]
+
+[[permission]]
+identifier = "allow-get-media-progress"
+description = "Enables the get_media_progress command."
+commands.allow = ["get_media_progress"]
+
+[[permission]]
+identifier = "allow-set-media-progress"
+description = "Enables the set_media_progress command."
+commands.allow = ["set_media_progress"]
